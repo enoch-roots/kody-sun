@@ -6,7 +6,7 @@ import Image from 'next/image';
 import qrImage from '../../../public/images/qr-kodysun.png';
 
 export const metadata: Metadata = {
-  title: 'Kody Sun — Flyer',
+  title: 'Kody Sun | Flyer',
   robots: { index: false, follow: false }, // keep out of search engines
 };
 
@@ -114,8 +114,8 @@ export default function FlyerPage() {
   return (
     <>
       {/* Inject animation keyframes — reuse globals but scoped here for print safety */}
+      {/* Fonts already self-hosted via next/font/google in RootLayout — no @import needed */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cormorant+Garamond:wght@300;400&family=Inter:wght@300;400;500&display=swap');
         @keyframes spinCW  { from { transform: rotate(0deg); }   to { transform: rotate(360deg); } }
         @keyframes spinCCW { from { transform: rotate(0deg); }   to { transform: rotate(-360deg); } }
         * { box-sizing: border-box; margin: 0; padding: 0; }

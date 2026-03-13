@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" fill="none">
+  <!-- Dark void background -->
+  <rect width="60" height="60" rx="12" fill="#04060e"/>
+  <!-- Five petals — solid fills, thicker strokes for legibility at small sizes -->
+  <path d="M30,52 Q18,30 30,8 Q42,30 30,52Z" fill="rgba(196,136,12,.35)" stroke="#e8b418" stroke-width="1.2"/>
+  <path d="M30,52 Q18,30 30,8 Q42,30 30,52Z" fill="rgba(196,136,12,.35)" stroke="#e8b418" stroke-width="1.2" transform="rotate(72,30,30)"/>
+  <path d="M30,52 Q18,30 30,8 Q42,30 30,52Z" fill="rgba(196,136,12,.35)" stroke="#e8b418" stroke-width="1.2" transform="rotate(144,30,30)"/>
+  <path d="M30,52 Q18,30 30,8 Q42,30 30,52Z" fill="rgba(196,136,12,.35)" stroke="#e8b418" stroke-width="1.2" transform="rotate(216,30,30)"/>
+  <path d="M30,52 Q18,30 30,8 Q42,30 30,52Z" fill="rgba(196,136,12,.35)" stroke="#e8b418" stroke-width="1.2" transform="rotate(288,30,30)"/>
+  <!-- Outer ring -->
+  <circle cx="30" cy="30" r="26" stroke="rgba(196,136,12,.4)" stroke-width="0.8"/>
+  <!-- Centre dot -->
+  <circle cx="30" cy="30" r="3.5" fill="#ffd740"/>
+</svg>

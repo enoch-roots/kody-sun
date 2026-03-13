@@ -24,21 +24,42 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Kody Sun — DJ & Music Curator",
+  metadataBase: new URL("https://kodysun.xyz"),
+  title: "Kody Sun | DJ & Electronic Ritualist",
   description:
-    "DJ, music curator, and event producer. Deep house, soul, and cinematic sounds. Book for events and listen to the latest mixes.",
+    "Kody Sun is a DJ, music curator, and event producer channelling sacred sound and warrior spirit through deep, soulful, and cinematic electronic music.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: { url: "/apple-touch-icon.png", sizes: "180x180" },
+  },
   openGraph: {
-    title: "Kody Sun",
-    description: "DJ · Curator · Event Producer",
-    url: "https://kodysun.com",
+    title: "Kody Sun | DJ & Electronic Ritualist",
+    description:
+      "Sacred Sound · Warrior Spirit. Kody Sun is a DJ and music curator blending deep house, soul, and cinematic sound into electronic ritual.",
+    url: "https://kodysun.xyz",
     siteName: "Kody Sun",
     type: "website",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    locale: "en_US",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kody Sun — DJ & Electronic Ritualist",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kody Sun",
-    description: "DJ · Curator · Event Producer",
+    title: "Kody Sun | DJ & Electronic Ritualist",
+    description:
+      "Sacred Sound · Warrior Spirit. Deep house, soul, and cinematic electronic music.",
+    site: "@kodysunbloom",
+    creator: "@kodysunbloom",
+    images: ["/og-image.jpg"],
   },
 };
 
@@ -49,6 +70,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${cinzelDeco.variable} ${display.variable} ${body.variable}`}>
+      <head>
+        {/* Warm up connection to YouTube CDN for thumbnail images in MusicMixes */}
+        <link rel="preconnect" href="https://img.youtube.com" />
+        <link rel="dns-prefetch" href="https://img.youtube.com" />
+      </head>
       <body>{children}</body>
     </html>
   );
