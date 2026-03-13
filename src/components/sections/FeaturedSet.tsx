@@ -1,4 +1,7 @@
+'use client';
 // BG-02 · ABYSS BASE #06091a · Ocean Depths cool sweep · Sacred Dusk bottom-right corner
+
+import { useEffect, useRef, useState } from 'react';
 
 const GEO_FALLS = [
   { left: '5%',  delay: '0s',    dur: '10s',  size: 6,  shape: 'circle',   op: .35 },
@@ -41,8 +44,21 @@ function GeoFallShape({ shape, size, op }: { shape: string; size: number; op: nu
 }
 
 export default function FeaturedSet() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [animPaused, setAnimPaused] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(([entry]) => {
+      setAnimPaused(!entry.isIntersecting);
+    }, { threshold: 0 });
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="featuredset" className="relative overflow-hidden">
+    <section id="featuredset" className="relative overflow-hidden" ref={sectionRef}>
 
       {/* ── BACKGROUND ───────────────────────────────────────────── */}
       <div
@@ -66,6 +82,8 @@ export default function FeaturedSet() {
               top: '-20px',
               left: f.left,
               animation: `geoFall ${f.dur} ${f.delay} ease-in infinite`,
+              animationPlayState: animPaused ? 'paused' : 'running',
+              willChange: 'transform, opacity',
             }}
           >
             <GeoFallShape shape={f.shape} size={f.size} op={f.op} />

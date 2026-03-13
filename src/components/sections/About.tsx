@@ -1,5 +1,8 @@
 // BG-05 · VOID-ROSE BASE #1a0910 · Sacred Dusk full center bloom · Stage Light gold behind bio
 
+import Image from 'next/image';
+import artist3 from '../../../public/images/artist3.jpeg';
+
 export default function About() {
   return (
     <section id="about" className="relative overflow-hidden">
@@ -45,15 +48,18 @@ export default function About() {
                 borderRadius: '4px',
                 border: '1px solid rgba(196,136,12,.14)',
                 boxShadow: '0 12px 60px rgba(0,0,0,.5)',
+                aspectRatio: '3 / 4',
               }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/artist3.jpeg"
+              <Image
+                src={artist3}
                 alt="Kody Sun"
-                className="w-full object-cover object-center"
-                style={{ aspectRatio: '3 / 4', filter: 'brightness(.88) saturate(.9)' }}
+                fill
+                className="object-cover object-center"
+                style={{ filter: 'brightness(.88) saturate(.9)' }}
                 loading="lazy"
+                placeholder="blur"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
 
               {/* Subtle dark vignette overlay */}

@@ -77,7 +77,10 @@ export default function MusicMixes() {
             src={THUMB_URL}
             alt="Live Set — Snake Island, ATX | SoulBloom | September 2025"
             className="absolute inset-0 w-full h-full object-cover"
-            style={{ transition: 'transform .6s ease', }}
+            style={{ transition: 'transform .6s ease' }}
+            loading="lazy"
+            fetchPriority="low"
+            sizes="(max-width: 768px) 100vw, 80vw"
           />
 
           {/* Dark overlay — base */}

@@ -9,7 +9,12 @@ const nextConfig: NextConfig = {
     deviceSizes: [390, 640, 828, 1080, 1280, 1920],
     // Intermediate sizes used for fill/responsive images
     imageSizes: [64, 128, 256, 384],
-    remotePatterns: [],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'img.youtube.com',
+      },
+    ],
   },
 };
 

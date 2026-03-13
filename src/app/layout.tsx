@@ -6,18 +6,21 @@ const cinzelDeco = Cinzel_Decorative({
   subsets: ["latin"],
   weight: ["700"],
   variable: "--font-cinzel-deco",
+  display: "swap",
 });
 
 const display = Cormorant_Garamond({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
   variable: "--font-display",
+  display: "swap",
 });
 
 const body = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
   variable: "--font-body",
+  display: "swap",
 });
 
 export const metadata: Metadata = {

@@ -1,6 +1,9 @@
 // Breathwork section — facilitation practice & certification
 // Using BG-07 background recipe
 
+import Image from 'next/image';
+import artist2 from '../../../public/images/artist2.jpeg';
+
 export default function MediaGallery() {
   return (
     <section id="breathwork" className="relative overflow-hidden">
@@ -137,15 +140,18 @@ export default function MediaGallery() {
                 borderRadius: '4px',
                 border: '1px solid rgba(196,136,12,.14)',
                 boxShadow: '0 12px 60px rgba(0,0,0,.5)',
+                aspectRatio: '3 / 4',
               }}
             >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/artist2.jpeg"
+              <Image
+                src={artist2}
                 alt="Kody Sun — Breathwork Facilitation"
-                className="w-full object-cover object-center"
-                style={{ aspectRatio: '3 / 4', filter: 'brightness(.88) saturate(.9)' }}
+                fill
+                className="object-cover object-center"
+                style={{ filter: 'brightness(.88) saturate(.9)' }}
                 loading="lazy"
+                placeholder="blur"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
 
               {/* Subtle dark vignette overlay */}
