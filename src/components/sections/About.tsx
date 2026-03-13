@@ -1,7 +1,7 @@
 // BG-05 · VOID-ROSE BASE #1a0910 · Sacred Dusk full center bloom · Stage Light gold behind bio
 
 import Image from 'next/image';
-import artist3 from '../../../public/images/artist3.jpeg';
+import artist from '../../../public/images/artist.jpeg';
 
 export default function About() {
   return (
@@ -52,7 +52,7 @@ export default function About() {
               }}
             >
               <Image
-                src={artist3}
+                src={artist}
                 alt="Kody Sun"
                 fill
                 className="object-cover object-center"
@@ -131,11 +131,11 @@ export default function About() {
             {/* Bio text */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <p style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(16px, 2vw, 20px)',
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(14px, 1.6vw, 17px)',
                 fontWeight: 300,
-                lineHeight: 1.75,
-                letterSpacing: '.02em',
+                lineHeight: 1.85,
+                letterSpacing: '.01em',
                 color: 'rgba(228,212,182,.80)',
               }}>
                 Kody Sun is an Integrated Architect, bridging the worlds of holistic wellness,
@@ -144,11 +144,11 @@ export default function About() {
                 his north star is helping others find their Inner Bloom.
               </p>
               <p style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(16px, 2vw, 20px)',
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(14px, 1.6vw, 17px)',
                 fontWeight: 300,
-                lineHeight: 1.75,
-                letterSpacing: '.02em',
+                lineHeight: 1.85,
+                letterSpacing: '.01em',
                 color: 'rgba(228,212,182,.65)',
               }}>
                 A certified breathwork facilitator and dynamic DJ, Kody crafts immersive,
@@ -171,7 +171,7 @@ export default function About() {
                     textTransform: 'uppercase',
                     padding: '4px 12px',
                     border: '1px solid rgba(196,136,12,.16)',
-                    borderRadius: '2px',
+                    borderRadius: '8px',
                   }}
                 >
                   {tag}

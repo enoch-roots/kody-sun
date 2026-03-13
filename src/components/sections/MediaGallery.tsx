@@ -79,24 +79,24 @@ export default function MediaGallery() {
             {/* Bio text — placeholder */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
               <p style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(16px, 2vw, 20px)',
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(14px, 1.6vw, 17px)',
                 fontWeight: 300,
-                lineHeight: 1.75,
-                letterSpacing: '.02em',
+                lineHeight: 1.85,
+                letterSpacing: '.01em',
                 color: 'rgba(228,212,182,.80)',
               }}>
-                [Placeholder — breathwork practice description. Certification background, modality, and the philosophy behind Kody's approach to breath as a vehicle for transformation.]
+                Kody Sun is a certified Breath of Life facilitator. Grounded in the science of nervous system optimization, Kody creates immersive containers for somatic activation and awakening leadership.
               </p>
               <p style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(16px, 2vw, 20px)',
+                fontFamily: 'var(--font-body)',
+                fontSize: 'clamp(14px, 1.6vw, 17px)',
                 fontWeight: 300,
-                lineHeight: 1.75,
-                letterSpacing: '.02em',
+                lineHeight: 1.85,
+                letterSpacing: '.01em',
                 color: 'rgba(228,212,182,.65)',
               }}>
-                [Placeholder — how breathwork and music intersect in Kody's facilitation practice. The containers he holds, events he leads, and communities he serves.]
+                His work bridges the physiological and the profound, using evidence-based breathwork and curated soundscapes to help individuals unlock their inner radiance. At the core of his mission is a simple belief: that true transformation begins with a regulated nervous system and ends with a community in full bloom.
               </p>
             </div>
 
@@ -113,7 +113,7 @@ export default function MediaGallery() {
                     textTransform: 'uppercase',
                     padding: '4px 12px',
                     border: '1px solid rgba(196,136,12,.16)',
-                    borderRadius: '2px',
+                    borderRadius: '8px',
                   }}
                   dangerouslySetInnerHTML={{ __html: tag }}
                 />

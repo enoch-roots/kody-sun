@@ -443,6 +443,7 @@ export default function Contact() {
             border: "1px solid rgba(196,136,12,.45)",
             background: "rgba(6,9,26,.4)",
             backdropFilter: "blur(8px)",
+            borderRadius: "8px",
             display: "inline-block",
           }}
         >

@@ -151,7 +151,7 @@ export default function LinkHub() {
                 padding: '18px 22px',
                 background: 'rgba(6,9,26,.42)',
                 border: '1px solid rgba(196,136,12,.14)',
-                borderRadius: '4px',
+                borderRadius: '8px',
                 textDecoration: 'none',
                 backdropFilter: 'blur(8px)',
                 transition: 'background .25s, border-color .25s',
@@ -163,7 +163,7 @@ export default function LinkHub() {
                 style={{
                   background: 'rgba(196,136,12,.06)',
                   transition: 'opacity .25s',
-                  borderRadius: '4px',
+                  borderRadius: '8px',
                 }}
               />
 
