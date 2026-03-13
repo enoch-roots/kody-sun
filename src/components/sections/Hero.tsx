@@ -252,7 +252,7 @@ export default function Hero() {
           quality={85} // sharp on mobile; desktop is blurred anyway
           sizes="100vw" // full-bleed at every breakpoint
           className="object-cover object-top
-                     opacity-[0.78] blur-[0.8px]
+                     opacity-[0.66] blur-[0.8px]
                      md:opacity-[0.55] md:blur-0"
         />
       </div>
@@ -262,12 +262,11 @@ export default function Hero() {
         className="absolute inset-0 z-[1] md:hidden"
         style={{
           background: `
-            linear-gradient(to bottom,
-              rgba(4,6,22,.44) 0%,
-              rgba(6,9,26,.26) 25%,
-              rgba(6,10,28,.38) 50%,
-              rgba(4,8,22,.68) 72%,
-              #04060e          100%
+            linear-gradient(180deg,
+              rgba(4,6,14,.58)  0%,
+              rgba(6,9,26,.57)  38%,
+              rgba(10,18,36,.74) 68%,
+              rgba(6,10,24,.97) 100%
             ),
             radial-gradient(ellipse 80% 50% at 50% 52%, rgba(196,136,12,.08) 0%, transparent 65%),
             radial-gradient(ellipse 60% 42% at 8% 82%, rgba(110,14,46,.08) 0%, transparent 52%)
@@ -354,12 +353,10 @@ export default function Hero() {
           Sacred Dusk rose tint at the base — blooms rise from below.
       ───────────────────────────────────────────────────────────── */}
       <div
-        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[5] flex items-end justify-center overflow-hidden"
+        className="absolute bottom-0 left-0 right-0 pointer-events-none z-[2] flex items-end justify-center overflow-hidden"
         style={{
           height: "110px",
           gap: "18px",
-          background:
-            "linear-gradient(to top, rgba(88,18,36,.14) 0%, transparent 100%)",
         }}
       >
         <svg
@@ -367,20 +364,20 @@ export default function Hero() {
           height="44"
           viewBox="0 0 52 44"
           style={{
-            opacity: 0.42,
-            filter: "drop-shadow(0 0 7px rgba(165,39,70,.4))",
+            opacity: 0.28,
+            filter: "drop-shadow(0 0 6px rgba(220,80,110,.4))",
           }}
         >
           <path
             d="M26 44 Q17 27 13 13 Q26 22 26 8 Q26 22 39 13 Q35 27 26 44Z"
-            fill="rgba(148,36,64,.42)"
-            stroke="rgba(192,72,96,.28)"
+            fill="rgba(210,70,100,.72)"
+            stroke="rgba(240,120,148,.55)"
             strokeWidth=".5"
           />
-          <path d="M26 44 Q8 30 4 16 Q20 24 26 8" fill="rgba(118,28,52,.32)" />
+          <path d="M26 44 Q8 30 4 16 Q20 24 26 8" fill="rgba(175,50,80,.52)" />
           <path
             d="M26 44 Q44 30 48 16 Q32 24 26 8"
-            fill="rgba(118,28,52,.32)"
+            fill="rgba(175,50,80,.52)"
           />
         </svg>
         <svg
@@ -388,23 +385,23 @@ export default function Hero() {
           height="60"
           viewBox="0 0 74 60"
           style={{
-            opacity: 0.52,
-            filter: "drop-shadow(0 0 10px rgba(165,39,70,.48))",
+            opacity: 0.34,
+            filter: "drop-shadow(0 0 8px rgba(220,80,110,.45))",
           }}
         >
           <path
             d="M37 60 Q26 40 20 22 Q37 31 37 12 Q37 31 54 22 Q48 40 37 60Z"
-            fill="rgba(165,39,70,.52)"
-            stroke="rgba(202,78,106,.32)"
+            fill="rgba(220,75,108,.78)"
+            stroke="rgba(248,140,165,.48)"
             strokeWidth=".5"
           />
           <path
             d="M37 60 Q13 44 5 26 Q26 34 37 12"
-            fill="rgba(130,30,58,.38)"
+            fill="rgba(185,55,88,.58)"
           />
           <path
             d="M37 60 Q61 44 69 26 Q48 34 37 12"
-            fill="rgba(130,30,58,.38)"
+            fill="rgba(185,55,88,.58)"
           />
         </svg>
         <svg
@@ -412,14 +409,14 @@ export default function Hero() {
           height="40"
           viewBox="0 0 48 40"
           style={{
-            opacity: 0.36,
-            filter: "drop-shadow(0 0 7px rgba(165,39,70,.3))",
+            opacity: 0.24,
+            filter: "drop-shadow(0 0 6px rgba(220,80,110,.35))",
           }}
         >
           <path
             d="M24 40 Q16 24 12 12 Q24 20 24 7 Q24 20 36 12 Q32 24 24 40Z"
-            fill="rgba(148,36,64,.4)"
-            stroke="rgba(192,72,96,.22)"
+            fill="rgba(210,70,100,.68)"
+            stroke="rgba(240,120,148,.42)"
             strokeWidth=".5"
           />
         </svg>
@@ -439,14 +436,14 @@ export default function Hero() {
       ───────────────────────────────────────────────────────────── */}
       {/* Mobile: anchored near bottom. Desktop: true vertical centre. */}
       <div
-        className="absolute bottom-40 left-1/2 -translate-x-1/2
-                   md:bottom-auto md:top-1/2 md:-translate-y-1/2
+        className="absolute top-[56%] left-1/2 -translate-x-1/2
+                   md:top-1/2 md:-translate-y-1/2
                    text-center pointer-events-none z-[11] whitespace-nowrap"
       >
         <div
           style={{
             fontFamily: "var(--font-cinzel-deco), serif",
-            fontSize: "clamp(38px, 10vw, 140px)",
+            fontSize: "clamp(48px, 13vw, 140px)",
             fontWeight: 700,
             letterSpacing: ".18em",
             background:
@@ -461,9 +458,9 @@ export default function Hero() {
         </div>
         <div
           style={{
-            fontSize: "clamp(11px, 2.2vw, 16px)",
+            fontSize: "clamp(13px, 3.2vw, 18px)",
             letterSpacing: ".38em",
-            color: "rgba(198,175,125,.5)",
+            color: "rgba(210,188,148,.72)",
             textTransform: "uppercase",
             marginTop: "12px",
             fontFamily: "var(--font-body)",
@@ -485,7 +482,7 @@ export default function Hero() {
             .getElementById("featuredset")
             ?.scrollIntoView({ behavior: "smooth" })
         }
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-[12] flex flex-col items-center gap-1 cursor-pointer bg-transparent border-none p-2 group"
+        className="absolute bottom-[8%] md:bottom-6 left-1/2 -translate-x-1/2 z-[12] flex flex-col items-center gap-1 cursor-pointer bg-transparent border-none p-2 group"
         aria-label="Scroll to next section"
       >
         {/* Sacred Rose — slowly rotating */}
