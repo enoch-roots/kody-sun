@@ -199,6 +199,7 @@ export default function Hero() {
       });
       ctx!.globalAlpha = 1; // always reset after the loop
       if (isVisible) rafId = requestAnimationFrame(tick);
+      else rafId = 0;
     }
 
     // IntersectionObserver — pause RAF entirely when hero is off-screen
@@ -251,8 +252,8 @@ export default function Hero() {
           quality={85} // sharp on mobile; desktop is blurred anyway
           sizes="100vw" // full-bleed at every breakpoint
           className="object-cover object-top
-                     opacity-90
-                     md:opacity-[0.55]"
+                     opacity-[0.78] blur-[0.8px]
+                     md:opacity-[0.55] md:blur-0"
         />
       </div>
 
@@ -262,13 +263,14 @@ export default function Hero() {
         style={{
           background: `
             linear-gradient(to bottom,
-              rgba(4,6,14,0)   0%,
-              rgba(4,6,14,.08) 30%,
-              rgba(4,6,14,.52) 62%,
+              rgba(4,6,22,.44) 0%,
+              rgba(6,9,26,.26) 25%,
+              rgba(6,10,28,.38) 50%,
+              rgba(4,8,22,.68) 72%,
               #04060e          100%
             ),
-            radial-gradient(ellipse 80% 50% at 50% 52%, rgba(196,136,12,.13) 0%, transparent 65%),
-            radial-gradient(ellipse 60% 42% at 8% 82%, rgba(110,14,46,.11) 0%, transparent 52%)
+            radial-gradient(ellipse 80% 50% at 50% 52%, rgba(196,136,12,.08) 0%, transparent 65%),
+            radial-gradient(ellipse 60% 42% at 8% 82%, rgba(110,14,46,.08) 0%, transparent 52%)
           `,
         }}
       />
