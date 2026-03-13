@@ -1,0 +1,24 @@
+# Next.js
+.next/
+out/
+build/
+
+# Dependencies
+node_modules/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Brief/context — local only, not in code repo
+_brief/
+
+# Vercel
+.vercel
+
+# OS
+.DS_Store
+Thumbs.db
+
+*.log

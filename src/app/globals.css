@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Cormorant Garamond", serif;
+  --font-body: "Inter", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  @apply text-brand-white font-body;
+  background-color: #04060e; /* void — matches section background bases */
+  overflow-x: hidden;
+}
+
+.section {
+  @apply px-5 py-20 md:px-10 md:py-28 max-w-5xl mx-auto;
+}
+
+.embed-wrap {
+  @apply rounded-lg overflow-hidden bg-brand-surface;
+}
+
+iframe {
+  display: block;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0A0A0A; }
+::-webkit-scrollbar-thumb { background: #333333; border-radius: 2px; }
+
+/* ── Hero animation keyframes ─────────────────────────────── */
+@keyframes corePulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1);    opacity: .75; }
+  50%       { transform: translate(-50%, -50%) scale(1.18); opacity: 1;   }
+}
+@keyframes textGlow {
+  from { filter: drop-shadow(0 0 18px rgba(245,202,40,.22)); }
+  to   { filter: drop-shadow(0 0 55px rgba(245,202,40,.52)); }
+}
+@keyframes spinCW  { from { transform: rotate(0deg);   } to { transform: rotate(360deg);  } }
+@keyframes spinCCW { from { transform: rotate(0deg);   } to { transform: rotate(-360deg); } }
+@keyframes geoFloat {
+  0%   { transform: translateY(0)      rotate(0deg);   opacity: 0;   }
+  8%   { opacity: .55; }
+  88%  { opacity: .25; }
+  100% { transform: translateY(-110vh) rotate(180deg); opacity: 0;   }
+}
+@keyframes geoFall {
+  0%   { transform: translateY(0)      rotate(0deg);   opacity: 0;   }
+  8%   { opacity: .50; }
+  88%  { opacity: .22; }
+  100% { transform: translateY(110vh)  rotate(-180deg); opacity: 0;  }
+}
