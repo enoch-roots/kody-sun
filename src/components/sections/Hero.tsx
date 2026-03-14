@@ -467,7 +467,7 @@ export default function Hero() {
             lineHeight: "2",
           }}
         >
-          Sacred Sound · Warrior Spirit
+          Sonic Alchemy • Warrior Poet
           <br />
           Electronic Ritualist
         </div>

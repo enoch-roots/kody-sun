@@ -121,9 +121,28 @@ export default function FlyerPage() {
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { background: #04060e; }
         @media print {
-          body { background: #04060e !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+          @page { size: letter portrait; margin: 0; }
+          html, body {
+            background: #04060e !important;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+          }
           .no-print { display: none !important; }
-          .flyer-wrap { box-shadow: none !important; }
+          .flyer-page-container {
+            display: flex !important;
+            justify-content: center !important;
+            align-items: flex-start !important;
+            padding: 0 !important;
+            min-height: 0 !important;
+            background: #04060e !important;
+          }
+          .flyer-wrap {
+            /* 643 × 1.27 = 816px = 8.5in  |  ~830 × 1.27 = ~1054px ≈ 11in */
+            width: 643px !important;
+            zoom: 1.27;
+            border: none !important;
+            box-shadow: none !important;
+          }
         }
       `}</style>
 
@@ -139,11 +158,11 @@ export default function FlyerPage() {
         color: 'rgba(198,175,125,.6)',
         textTransform: 'uppercase',
       }}>
-        Hidden page — not linked from nav &nbsp;·&nbsp; Cmd+P / Ctrl+P to print &nbsp;·&nbsp; Set paper to A5 portrait, background graphics on
+        Hidden page — not linked from nav &nbsp;·&nbsp; Cmd+P / Ctrl+P to print &nbsp;·&nbsp; Set paper to <strong style={{ color: 'rgba(198,175,125,.85)' }}>Letter</strong>, margins <strong style={{ color: 'rgba(198,175,125,.85)' }}>None</strong>, background graphics <strong style={{ color: 'rgba(198,175,125,.85)' }}>On</strong>
       </div>
 
       {/* Page container */}
-      <div style={{
+      <div className="flyer-page-container" style={{
         minHeight: '100vh',
         background: '#04060e',
         display: 'flex',
@@ -219,7 +238,9 @@ export default function FlyerPage() {
             textAlign: 'center',
             zIndex: 1,
           }}>
-            Sacred Sound · Warrior Spirit
+            Sonic Alchemy • Warrior Poet
+            <br />
+            Electronic Ritualist
           </div>
 
           {/* ── Name ─── */}
@@ -337,18 +358,48 @@ export default function FlyerPage() {
             kodysun.xyz
           </div>
 
-          <div style={{
-            fontFamily: 'Inter, sans-serif',
-            fontSize: 9,
-            letterSpacing: '.32em',
-            color: 'rgba(198,175,125,.38)',
-            textTransform: 'uppercase',
-            fontWeight: 400,
-            textAlign: 'center',
-            zIndex: 1,
-            lineHeight: 2.2,
-          }}>
-            @solsticek &nbsp;·&nbsp; @kodysunbloom
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, zIndex: 1 }}>
+            {/* Row 1: Instagram + SoundCloud + YouTube */}
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+              {/* Instagram · @solsticek */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style={{ opacity: 0.38 }}>
+                  <rect x="2" y="2" width="20" height="20" rx="5" stroke="rgba(198,175,125,1)" strokeWidth="1.8"/>
+                  <circle cx="12" cy="12" r="5" stroke="rgba(198,175,125,1)" strokeWidth="1.8"/>
+                  <circle cx="17.5" cy="6.5" r="1.4" fill="rgba(198,175,125,1)"/>
+                </svg>
+                <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 9, letterSpacing: '.32em', color: 'rgba(198,175,125,.38)', textTransform: 'uppercase', fontWeight: 400 }}>@solsticek</span>
+              </div>
+              {/* SoundCloud · solsticek */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                <svg width="18" height="11" viewBox="0 0 50 34" fill="rgba(198,175,125,1)" style={{ opacity: 0.38 }}>
+                  <rect x="0"  y="27" width="6" height="7"  rx="3"/>
+                  <rect x="8"  y="21" width="6" height="13" rx="3"/>
+                  <rect x="16" y="15" width="6" height="19" rx="3"/>
+                  <rect x="24" y="9"  width="6" height="25" rx="3"/>
+                  <circle cx="38" cy="12" r="12"/>
+                  <rect   x="26" y="12" width="24" height="22"/>
+                </svg>
+                <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 9, letterSpacing: '.32em', color: 'rgba(198,175,125,.38)', textTransform: 'uppercase', fontWeight: 400 }}>solsticek</span>
+              </div>
+              {/* YouTube · @kodysunbloom */}
+              <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+                <svg width="15" height="11" viewBox="0 0 24 17" fill="none" style={{ opacity: 0.38 }}>
+                  <rect x="0.5" y="0.5" width="23" height="16" rx="4" stroke="rgba(198,175,125,1)" strokeWidth="1.6"/>
+                  <path d="M10 5.5l6 3-6 3V5.5z" fill="rgba(198,175,125,1)"/>
+                </svg>
+                <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 9, letterSpacing: '.32em', color: 'rgba(198,175,125,.38)', textTransform: 'uppercase', fontWeight: 400 }}>@kodysunbloom</span>
+              </div>
+            </div>
+            {/* Row 2: SoulBloom Instagram */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 5 }}>
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" style={{ opacity: 0.38 }}>
+                <rect x="2" y="2" width="20" height="20" rx="5" stroke="rgba(198,175,125,1)" strokeWidth="1.8"/>
+                <circle cx="12" cy="12" r="5" stroke="rgba(198,175,125,1)" strokeWidth="1.8"/>
+                <circle cx="17.5" cy="6.5" r="1.4" fill="rgba(198,175,125,1)"/>
+              </svg>
+              <span style={{ fontFamily: 'Inter, sans-serif', fontSize: 9, letterSpacing: '.32em', color: 'rgba(198,175,125,.38)', textTransform: 'uppercase', fontWeight: 400 }}>@soulbloomfestival</span>
+            </div>
           </div>
 
           {/* ── Bottom token cluster ─── */}

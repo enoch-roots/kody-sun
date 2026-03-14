@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kody Sun | DJ & Electronic Ritualist",
     description:
-      "Sacred Sound · Warrior Spirit. Kody Sun is a DJ and music curator blending deep house, soul, and cinematic sound into electronic ritual.",
+      "Sonic Alchemy · Warrior Spirit. Kody Sun is a DJ and music curator blending deep house, soul, and cinematic sound into electronic ritual.",
     url: "https://kodysun.xyz",
     siteName: "Kody Sun",
     type: "website",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kody Sun | DJ & Electronic Ritualist",
     description:
-      "Sacred Sound · Warrior Spirit. Deep house, soul, and cinematic electronic music.",
+      "Sonic Alchemy · Warrior Spirit. Deep house, soul, and cinematic electronic music.",
     site: "@kodysunbloom",
     creator: "@kodysunbloom",
     images: ["/og-image.jpg"],

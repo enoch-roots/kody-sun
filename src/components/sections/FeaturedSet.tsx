@@ -232,7 +232,7 @@ export default function FeaturedSet() {
               lineHeight: 1.1,
             }}
           >
-            Sacred Sound
+            Sonic Alchemy
           </h2>
           <p
             style={{
